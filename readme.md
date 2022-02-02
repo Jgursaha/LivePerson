@@ -30,21 +30,22 @@ OBJECTIVES MET
 1. Successful retrieval of baseline URI for 'idp' domain
 2. Successful retrieval of baseline URI for 'asyncMessagingEnt' domain
 3. Successful retrieval of consumer jwt
+4. WebSocket connection with jwt
+5. Message exchange with the server
 
 
 
 *******************************************************
 OBJECTIVES NOT MET
 *******************************************************
-1. WebSocket connection with jwt
-2. Message exchange with the server
+
 
 
 
 *******************************************************
 POTENTIAL ISSUES/RESOLUTION
 *******************************************************
-1. JWT availability
+1. JWT availability (Identified as Root Cause)
 Code sequence needs to be explicitly controlled to ensure jwt is available
 before the creation of a secure web socket connection.
 (Experiments carried out with 'Promise' construct in testPromises.js file)
